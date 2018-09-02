@@ -4,7 +4,6 @@ services:
 
 before_install:
   - docker build -t anttia/react-test -f ./client/Dockerfile.dev ./client
-  - docker build myotherproject
 
 script:
  - docker run anttia/react-test npm test -- --coverage
